@@ -1,0 +1,45 @@
+= gen_blog README 
+Steve Willson 
+5/7/18
+
+== Overview
+
+`gen_blog` is a tool that can be used to generate a blog website from a collection of `.adoc` files. It uses the Acsiidoctor tool to generate the `.html` pages of each of the `.adoc` files. It generates an `index.html` page that lists the title, author, date, and estimated reading time (200 words/minute) for each `.adoc` file.
+
+== Requirements for gen_blog.sh
+
+=== Main page (index.html) 
+
+* Ability to set a heading, each adoc page should link back to the main page?
+* Configure 'contact me' information (github, twitter, email, website)
+* Want to include 'tags' to have a way to limit the posts to specific tags, also do a cool 'word art' based on the frequency of the tags usage with a link to the tags page
+
+=== Design
+
+* Asciidoc files on a static webpage
+* Clean look, white text on a black background
+* Each entry will have a Title, author, date, time to read, text (5? lines of text will be shown on the main page)
+* Links to other pages in the blog, arrange the content by date (reverse with newest entries on top)
+* Metadata tags for blog entries?
+* Don't care about view statistics, running javascript, just display asciidoc formatted pages
+* Each entry will have a link back to the main page
+
+=== Setup
+
+Treat the generation of the blog as something that can be auto-deployed from a github repo
+
+* Setup a webserver
+* Generate a keypair `ssh-keygen`
+* Copy the public key to github (or similar git hosting site)
+* Set up a cron job for the webserver to check in with the git server using ssh (hourly?), copy files that have changed to a specified directory (`~/blog`?) and then use asciidoctor and a bash script to generate the content and write the content to `/var/www/html/`
+
+=== Home Page generation
+
+* Generate the header
+* Generate the 'contact me' area
+* TODO: Select the first 10 lines of each of the adoc files (reverse sorted by date) - not done yet, not sure how to do this...
+
+=== Required parameters
+BLOG_TITLE, BLOG_SUBTITLE, TWITTER, WEBSITE, GITHUB, EMAIL
+
+
