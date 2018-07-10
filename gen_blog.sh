@@ -28,6 +28,7 @@ CONTENT_DIR="/home/user/blog/content"
 OUTPUT_DIR="/home/user/blog/output"
 BASE_DIR="/home/user/blog"
 WEBSERVER_DIR="/var/www/html"
+GEN_BLOG_DIR="/home/user/github_gen_blog"
 STYLESHEET="boot-cyborg.css"
 
 # Functions to create the blog
@@ -79,12 +80,15 @@ EOF
 
 copy_images()
 {
-    cp -r $CONTENT_DIR/images/ $OUTPUT_DIR
+    #cp -r $CONTENT_DIR/images/ $OUTPUT_DIR
+    cp -r $GEN_BLOG_DIR/images/ $OUTPUT_DIR
 }
 
 copy_stylesheet()
 {
-    cp -r $CONTENT_DIR/$STYLESHEET $OUTPUT_DIR
+    #cp -r $CONTENT_DIR/$STYLESHEET $OUTPUT_DIR
+    cp -r $GEN_BLOG_DIR/$STYLESHEET $CONTENT_DIR
+    cp -r $GEN_BLOG_DIR/$STYLESHEET $OUTPUT_DIR
 }
 
 convert_content_adoc_to_html()
