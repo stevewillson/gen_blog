@@ -5,8 +5,7 @@
 # Steve Willson
 # 5/7/18
 # gen_blog.sh
-# script to generate a blog from a
-# collection of .adoc files
+# script to generate a blog from a collection of .adoc files
 #
 #######################################
 
