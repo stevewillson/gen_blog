@@ -12,13 +12,13 @@
 DEBUG=0
 
 # Blog title, subtitle, and author
-BLOG_TITLE="willson.tk"
+BLOG_TITLE="willson.ga"
 BLOG_SUBTITLE="because when all is said and done, more is said than done"
 AUTHOR="Steve Willson"
 
 # Contact info
 TWITTER="https://twitter.com/stevewillson"
-WEBSITE="https://willson.tk"
+WEBSITE="https://willson.ga"
 GITHUB="https://github.com/stevewillson"
 EMAIL="steve.willson@gmail.com"
 
